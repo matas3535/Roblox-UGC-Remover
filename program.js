@@ -5,9 +5,14 @@ async function get_csrf()
     {
         const meta_tag = document.querySelector('meta[name="csrf-token"]');
         //
-        if (meta_tag && meta_tag.getAttribute('data-token'))
+        if (meta_tag)
         {
-            return meta_tag.getAttribute('data-token');
+            const data_token = meta_tag.getAttribute('data-token');
+            //
+            if (data_token)
+            {
+                return data_token;
+            };
         };
         //
         return null;
