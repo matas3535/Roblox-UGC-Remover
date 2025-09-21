@@ -57,6 +57,7 @@ async function remove_item(asset_id, csrf_token)
         console.error('error while removing item', eggsception);
     };
 };
+//
 async function handler()
 {
     try
